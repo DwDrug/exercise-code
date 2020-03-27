@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 第一步 创建 XMLHttpRequest
+    var xmlhttp;
+    if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+      xmlhttp = new XMLHttpRequest();
+    }
+    else {// code for IE6, IE5
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    // 第二步 发送请求
+    xmlhttp.open("GET", "https://api.myjson.com/bins/x6im0", true);
+    xmlhttp.send();
+    // 第三步 接受返回值
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        var thisRes = JSON.parse(xmlhttp.responseText);
+        console.log(xmlhttp.responseText);
+      }
+    }
+  </script>
+</body>
+
+</html>

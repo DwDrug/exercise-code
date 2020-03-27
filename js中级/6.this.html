@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">btn</button>
+  <script>
+    // var btn = document.querySelector("#btn");
+    // btn.onclick = function(){
+    //   console.log(this);
+    //   function foo(){
+    //   console.log(this);
+    //   }
+    //   foo();
+    // }
+    // function foo(){
+    //   console.log(this);
+    // }
+    // foo();
+
+    // var obj = {
+    //   username:"xiaoming",
+    //   showName: function(){
+    //     console.log(this);
+    //     function foo(){
+    //       console.log(this);
+    //     }
+    //     foo();
+    //   }
+    // }
+    // obj.showName();
+
+    var obj = {
+      a:"hello"
+    }
+    // var a = 10;
+    // function foo(n,m){
+    //   console.log(this.a + n + m);
+    // } 
+    // foo()
+
+    // foo.call(obj," world"," fellow41");//第二个开始接收参数
+    // foo.apply(obj,[" world"," fellow41"]);//只接收两个参数，第二个是数组
+    // var foo2 = foo.bind(obj);//返回修改好this指向的函数，可以接收多个参数，逗号隔开
+    // foo2();
+  </script>
+</body>
+</html>

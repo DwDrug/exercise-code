@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input {
+      width: 50px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="inp" type="text">
+  <div>
+    <h1 id="text"></h1>
+  </div>
+  <script>
+    function ajaxGet(url,callback) {
+      var xmlhttp;
+      if (window.XMLHttpRequest) {
+        xmlhttp = new XMLHttpRequest;
+      } else {
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          var thisRes = JSON.parse(xmlhttp.responseText)
+          callback(thisRes.name);
+        }
+      }
+    }
+
+    var oInp = document.querySelector("#inp");
+    var oText = document.querySelector("#text");
+
+    oInp.onkeyup = function () {
+      var thisVal = this.value;
+      console.log(thisVal);
+      ajaxGet("https://api.myjson.com/bins/l8pz0",function(res){
+        var resArr = res.name;
+        for(var i=0;i<resArr.length;i++){
+          if(thisVal == resArr[i]){
+            oText.innerText = "不可用";
+            return true;
+          }
+        }
+        oText.innerText = "可用";
+        console.log(res);
+      });  
+    }
+  </script>
+</body>
+
+</html>

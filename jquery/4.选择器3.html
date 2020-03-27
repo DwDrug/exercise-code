@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+  <style>
+    /* .box div{
+      color: red;
+    } */
+    /* .box > div{
+      border-color: red;
+    } */
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>34567</li>
+    <li class="a">4</li>
+    <li>5</li>
+    <li>6<span>hello</span></li>
+  </ul>
+  <script>
+    // $("li:eq(1)").css({color:"red"});
+    // $("li:gt(3)").css({color:"red"});
+    // $("li:odd").css({color:"red"});
+    // $("li:eq(1)").css({color:"red"});
+    // $("li:not(.a)").css({color:"red"});
+
+    $("li:contains(h)").css({color:"red"});
+  </script>
+</body>
+</html>

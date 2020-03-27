@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* css reset start */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* css reset end */
+    /* header start */
+    .header {
+      width: 1130px;
+      margin: 0 auto;
+      height: 98px;
+    }
+
+    .header .header-logo {
+      width: 200px;
+      height: 98px;
+      background-image: url("./img/mistore_logo.png");
+    }
+
+    /* header end */
+    /* body start */
+    .body .body-bg {
+      width: 100%;
+      height: 588px;
+      background-image: url("./img/bgimg.jpg");
+      background-position: center;
+    }
+
+    .body .login-warper {
+      width: 1130px;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+
+    .body .login-bar {
+      margin: 0 0 20px auto;
+      width: 410px;
+      height: 556px;
+      background-color: white;
+    }
+
+    .body .login-bar .lb-top {
+      padding: 27px 0 24px;
+      text-align: center;
+      font-size: 24px;
+      color: #666;
+    }
+
+    .body .lb-top a {
+      color: #666;
+    }
+
+    .body .lb-top a:hover {
+      color: #f56600;
+    }
+
+    .body .lb-top span {
+      border: 1px solid #e0e0e0;
+      margin: 0 42px 0 35px;
+    }
+
+    .body .lb-top .active {
+      color: #f56600;
+    }
+
+    .body .lb-center {
+      width: 348px;
+      margin: 10px auto 0;
+    }
+
+    .body .lb-center input {
+      width: 314px;
+      height: 22px;
+      font-size: 16px;
+      padding: 13px 16px 13px 16px;
+      margin-bottom: 14px;
+      outline: none;
+    }
+
+    .body .button-bar button {
+      cursor: pointer;
+      width: 100%;
+      height: 50px;
+      background-color: #ff6700;
+      color: #fff;
+      border: 0;
+      margin-bottom: 14px;
+    }
+
+    .body .formtext .ft-left {
+      float: left;
+    }
+
+    .body .formtext .ft-right {
+      float: right;
+      color: #999;
+    }
+
+    .body .formtext a {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .body .formtext a:hover {
+      color: #ff6700;
+    }
+
+    .body .formtext .active {
+      color: #ff6700;
+    }
+
+    .body .lb-bottom {
+      padding-top: 140px;
+      width: 348px;
+      margin: 0 auto;
+    }
+
+    .body .lb-bottom fieldset {
+      border-width: 1px 0 0 0;
+      border-color: #fff;
+      text-align: center;
+    }
+
+    .body .lb-bottom legend {
+      color: #bbb;
+    }
+
+    .body .lb-bottom ul {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .body .lb-bottom li {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #0288d1;
+      display: inline-block;
+      margin: 0 17px;
+    }
+
+    .body .lb-bottom i {
+      display: block;
+      margin: 4px auto 0;
+      background-image: url("./img/icons_type.png");
+      width: 18px;
+      height: 18px;
+    }
+
+    .body .lb-bottom li:nth-child(1) i {
+      background-position: -19px 0;
+    }
+
+    .body .lb-bottom li:nth-child(2) {
+      background-color: #d32f2f;
+    }
+
+    .body .lb-bottom li:nth-child(2) i {
+      background-position: -38px 0;
+    }
+
+    .body .lb-bottom li:nth-child(3) {
+      background-color: #0ae;
+    }
+
+    .body .lb-bottom li:nth-child(3) i {
+      margin-top: 6px;
+      margin-left: 4px;
+      width: 25px;
+      background-position: -57px 0;
+    }
+
+    .body .lb-bottom li:nth-child(4) {
+      background-color: #00d20d;
+    }
+
+    .body .lb-bottom li:nth-child(4) i {
+      margin-top: 6px;
+      width: 24px;
+      background-position: -83px 0;
+    }
+    /* body end */
+    /* footer start */
+    .footer{
+      text-align: center;
+      font-size: 14px;
+    }
+    .footer .lang-select-list {
+      text-align: center;
+      padding-top: 80px;
+    }
+    .footer .lang-select-list li{
+      
+      display: inline-block;
+    }
+    .footer .lang-select-list a{
+      color: #333;
+      padding: 0 10px;
+    }
+    .footer p{
+      padding: 10px 0;
+    }
+    /* footer start */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-logo"></div>
+    </div>
+    <div class="body">
+      <div class="body-bg">
+        <div class="login-warper">
+          <div class="login-bar">
+            <div class="lb-top">
+              <a class="active" href="">帐号登录</a>
+              <span></span>
+              <a href="">扫码登录</a>
+            </div>
+            <div class="lb-center">
+              <input type="text" placeholder="邮箱/手机号/小米ID">
+              <input type="password" placeholder="密码">
+              <div class="button-bar">
+                <button>登录</button>
+              </div>
+              <div class="formtext">
+                <div class="ft-left">
+                  <a class="active" href="">手机短信登录/注册</a>
+                </div>
+                <div class="ft-right">
+                  <a href="">立即注册</a>
+                  <span>|</span>
+                  <a href="">忘记密码</a>
+                </div>
+              </div>
+            </div>
+            <div class="lb-bottom">
+              <fieldset>
+                <legend>其他方式登录</legend>
+              </fieldset>
+              <ul>
+                <li>
+                  <i></i>
+                </li>
+                <li>
+                  <i></i>
+                </li>
+                <li>
+                  <i></i>
+                </li>
+                <li>
+                  <i></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <ul class="lang-select-list">
+        <li><a href="">简体</a>|</li>
+        <li><a href="">繁体</a>|</li>
+        <li><a href="">English</a>|</li>
+        <li><a href="" >常见问题</a>|</li>
+        <li><a href="" >隐私政策</a></li>
+      </ul>
+      <p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+    </div>
+  </div>
+</body>
+
+</html>

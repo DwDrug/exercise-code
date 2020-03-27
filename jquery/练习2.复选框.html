@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div>
+    <h1>你爱好的运动是</h1>
+    <input type="checkbox">篮球
+    <input type="checkbox">足球
+    <input type="checkbox">排球
+  </div>
+  <div>
+    <button id="checA">全选</button>
+    <button id="checN">全不选</button>
+    <button id="reverse">反选</button>
+  </div>
+  <script>
+    $("#checA").click(function(){
+      $(":checkbox").prop("checked",true);
+    })
+    $("#checN").click(function(){
+      $(":checkbox").prop("checked",false);
+    })
+    // $("#reverse").click(function(){
+    //   for(var i=0;i<$(":checbox").length;i++){
+    //     if($(":checkbox:eq("+i+")").prop("checked",true)){
+    //       $(":checkbox:eq("+i+")").prop("checked",false);
+    //     }else{
+    //       $(":checkbox:eq("+i+")").prop("checked",true);
+    //     }
+    //   }
+
+    // })
+    $("#reverse").click(function(){
+      for(var i=0;i<$(":checkbox").length;i++){
+        var thisChec = $(":checkbox").get(i);
+       thisChec.checked = !thisChec.checked;
+      }
+      
+    })
+
+  </script>
+</body>
+</html>

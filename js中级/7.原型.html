@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function foo(){
+
+    // }
+    // foo.fellow();//hello world
+    // var n = new Number();
+    // n.push("1");
+
+    // var arr = new Array();//arr 实例化出来的对象  Array 构造函数
+    // console.log(arr.__proto__);//实例化对象查看原型
+    // console.log(Array.prototype);//构造函数查看原型
+
+    // var arr = new Array();
+    // console.log(arr.length);
+    
+
+    // 原型链 当前构造函数内找，当前没有向上找构造原型，直到找到，若无则undefiend
+    function Foo(i){
+      this.fellow = i;
+      // this.showFellow = function(){
+      //   console.log(41);
+      // }
+    }
+    Foo.prototype.showFellow = function(){
+      console.log(this.fellow);
+    }
+    var foo = new Foo(43);
+    console.log(foo.fellow);
+    foo.showFellow();
+    
+    // arr.push("1");
+    // console.log(arr);
+    
+  </script>
+</body>
+</html>

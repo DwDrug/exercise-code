@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var timer = new Date();
+    timer.getDate();
+    
+    timer.setDate(timer.getDate()+1);
+    var timerStr = timer.toUTCString();
+    
+    document.cookie = "username = texta;expires="+timerStr;
+    document.cookie = "psw = 123;expires="+timerStr;
+    console.log(document.cookie);
+    
+    function setCookie(key,val,timer){
+      document.cookie = "key="+key+";val="+val+";expires="+timer;
+    }
+    function getCookie(key){
+      if(document.cookie.key == "username"){
+        return;
+      }
+      
+    }
+    function removeCookie(key){
+      document.cookie;
+    }
+    setCookie("username","testa",1);
+    getCookie("username");
+    removeCookie("username");
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+function foo(){
+  // 类数组转换真实数组 面试题
+  var thisArg = Array.prototype.slice.call(arguments,1)
+  console.log(thisArg);
+  
+}
+foo("a","b","c","d");

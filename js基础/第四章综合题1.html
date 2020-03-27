@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var age = prompt("请输入年龄");
+    age = parseInt(age);
+    switch(age){
+      case age<14: console.log("儿童");break;
+      case age<=14 && age<24: console.log("青少年");break;
+      case age<=24 && age<40: console.log("青年");break;
+      case age<=40 && age<60: console.log("中年");break;
+      case age>=60: console.log("老年");break;
+      default : break; 
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div class="box">
+    <input type="text" id="inp">
+  </div>
+  
+  <!-- <button id="btn">按钮</button> -->
+  <script>
+    $("#inp").keyup(function(e){
+      if(e.which == 13){
+        console.log("按下回车");
+        
+      }
+    })
+
+    // // focusout 父元素中有子元素触发blur事件，触发focusout
+    // $(".box").focusout(function(){
+    //   console.log("blur");
+    // })
+    // // focusout 父元素中有子元素触发focus事件，触发focusin
+    // $(".box").focusin(function(){
+    //   console.log("focus");
+    // })
+
+    // $("#btn").click(function(){
+    //   $("#inp").focus();
+    // })
+    // // focus 获取焦点
+    // $("#inp").focus(function(){
+    //   console.log("focus");   
+    // })
+    // // blur 失去焦点
+    // $("#inp").blur(function(){
+    //   console.log("blur");
+    // })
+  </script>
+</body>
+</html>

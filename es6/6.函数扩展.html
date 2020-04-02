@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function foo([a,b=2]){
+    //   console.log(a,b);
+    // }
+    // foo([1,3]);
+
+    // function foo(a,b=2){
+    //   console.log(a,b);
+    // }
+    // foo(1,3)
+
+    // function foo(a=2,b){
+    //   console.log(a,b);
+    // }
+    // foo(1,3)
+
+    // function foo(a,b=2,c=1){
+    //   console.log(foo.length);//foo.length返回没有设定默认值的参数的个数
+    // }
+    // foo(1,2,3)
+
+    // function foo(){
+    //   console.log(foo.name);
+    // }
+    // foo()
+    
+    //返回函数名
+    // var foo = function foo2(){
+    //   console.log(foo.name);
+    // }
+    // foo()//foo2
+    
+    //严格模式 'use strict'
+    //全局变量显式声明
+    'use strict'
+    // a = 10;
+    // console.log(window.a);
+
+    // 禁止this指向全局变量
+    // function foo(){
+    //   console.log(this);
+    // }
+    // foo()
+
+    // 构造函数必须new
+    // function Person(name){
+    //   this.name = name;
+    // }
+    // Person("xiao a");
+    // var Person2 = new Person("xiaoming");
+    
+    // 不允许有重名参数
+    // function foo(a,a,b){
+    //   console.log(a,b);
+    // }
+    // foo(1,2,3);
+
+    // 禁止使用with语句
+    // var obj = {
+    //   name:"xiao a"
+    // }
+    
+    // var name = "xiao b"
+    // with(obj){
+    //   function foo(){
+    //     console.log(name);
+    //   }
+    // }
+    // foo();
+
+    // 禁止使用arguments.callee
+    // function foo(num){
+    //   if(num == 1){
+    //     return 1
+    //   }else{
+    //     return num * arguments.callee(num-1)
+    //   }
+    // }
+    // console.log(foo(10));
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let mapObj = new Map();
+    // mapObj.set("name","xiaoming1");
+    // mapObj.set("name2","xiaoming2");
+    // mapObj.set("name3","xiaoming3");
+    // console.log(mapObj.get("name2"));
+    // mapObj.delete("name2");
+
+    // for(let [item,val] of mapObj.entries()){
+    //   console.log(item,val);
+    // }
+    // console.log(mapObj);
+
+    // WeakMap只接受对象作为键名，不接受其他类型值
+    let wmObj = new WeakMap();
+    wmObj.set({name:"a"},"xiao a");
+    console.log(wmObj);
+    
+    
+  </script>
+</body>
+</html>

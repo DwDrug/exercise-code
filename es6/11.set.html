@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let arr = [1,2,3,4,3,5];
+    // let setArr = new Set(arr);
+    // setArr.add(5);
+    // setArr.add("hello");
+    // setArr.add({name:"aa"});
+    // setArr.delete(5);
+    // setArr.clear();
+    // console.log(setArr);
+    // console.log(setArr.size);
+    // console.log(setArr.has("hello"));
+    // for(let val of setArr){
+    //   console.log(val);
+    // }
+    
+
+    // WeakSet 成员只能是对象，不能是其他类型的值。
+    let wsArr = new WeakSet();
+    let obj = {
+      name:"xiaoa"
+    }
+    wsArr.add(obj);
+    wsArr.add(obj);
+    wsArr.add({age:10})
+    console.log(wsArr);
+    
+    
+  </script>
+</body>
+</html>
